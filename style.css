@@ -1,0 +1,67 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+body{
+    padding: 0;
+    margin: 0%;
+    background: linear-gradient(to right, #18a7a7, #296442, rgb(15, 27, 32));
+    display:flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: minmax(70px, auto) repeat(5, 70px);
+    justify-content: center;
+    align-content: center;
+    grid-gap: 4px;
+    padding: 30px;
+    background-color: #1b1b1f;
+}
+.grid-container > button{
+    cursor: pointer;
+    font-size: 30px;
+    border:none;
+    border-radius: 18px;
+    outline: none;
+    background: lineear-gradient( #242223, #101011, blue);
+    color: rgb(108, 194, 194);
+    text-align: center;
+    box-shadow: inset 0 -5px 19px 0px #bcc0bb,inset 0px 5px 10px 3px #847a7aba, 0 5px 10px 0px #1e211e;  
+}
+.grid-container >button:hover{
+    background-color: rgb(104, 100, 100);
+    color:black;
+}
+button.span{
+    background-color: rgb(20, 067, 22, 0.99);
+    color: rgb(27, 242, 250);
+    grid-column: span 2;
+    font-weight: 900;
+    
+}
+
+.output {
+grid-column: 1/-1;
+background-color:rgba(125, 136, 136, 0.85); ;
+color: whitesmoke;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: flex-end;
+padding:10px;
+word-wrap: break-word ;
+word-break:break-all ;
+}
+
+.output .previous-operand{
+    font-size: 1.5rem;
+    color: rgb(245, 245, 245, 0.7);
+}
+.output .current-operand{
+    font-size: 2.5rem;
+}
